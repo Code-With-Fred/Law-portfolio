@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+.conteiner {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(/assest/Image\ \(3\).png);
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 30px;
+}
+.conteiner nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  padding-top: 20px;
+  /* z-index: 1000;
+  position: fixed;
+  top: 0; */
+}
+
+.conteiner nav ul {
+  display: flex;
+  align-items: center;
+}
+.conteiner nav ul li {
+  margin-right: 30px;
+  list-style: none;
+}
+.conteiner nav ul li a {
+  text-decoration: none;
+  color: rgb(47, 135, 146);
+  font-size: 20px;
+  font-weight: 700;
+}
+.conteiner nav ul li a:hover {
+  background-color: transparent;
+  border: 1.5px solid rgb(126, 2, 2);
+  padding: 5px;
+  border-radius: 5.5px;
+  transition: 1s;
+  box-shadow: #efe;
+  color: #efe;
+}
+/* this is the section for the topc of this webpage */
+.welcome-message {
+  text-align: center;
+  padding-top: 200px;
+  line-height: 60.5px;
+}
+.welcome-message h1 {
+  font-size: 60.5px;
+  color: rgb(47, 135, 146);
+  text-shadow: 2px 2px 4px rgba(29, 16, 211, 0.2);
+  text-transform: capitalize;
+}
+.welcome-message h3 {
+  font-size: 30px;
+  color: rgb(47, 135, 146);
+  text-shadow: 2px 2px 4px rgba(29, 16, 211, 0.2);
+  /* box-shadow: 0px 0px 10px rgba(29, 16, 211, 0.2); */
+}
+#btn {
+  padding: 10px 15px 10px 15px;
+  background: none;
+  color: #efe;
+  /* border: 1px solid whitesmoke; */
+  outline: none;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+#btn:hover {
+  background-color: rgb(38, 29, 87);
+  transition: 2ms;
+  cursor: pointer;
+}
+/* this is the about page of this website */
+.about-section {
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f0;
+}
+.about-hold {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0 30px;
+}
+
+.about-section .first {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.about-section .first p{
+    font-size: 20px;
+    color: gray;
+    text-transform: capitalize;
+}
+.about-section img{
+   border-radius: 10px;
+}
+.about-cont h1{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+/* this is the service section of this  website */
+.service-section{
+    padding: 0 30px ;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+}
+.sec{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.sec h1{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.sec p{
+    font-size: 20px;
+    color: gray;
+    text-transform: capitalize; 
+}
+.service-section h1{
+    text-align: center;
+}
+
+.one{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between  ;
+    padding-bottom: 30px;
+}
+.one .ser1{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+}
+.one .ser1:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.one .ser2{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+    text-align: center;
+
+}
+.one .ser2:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.one .ser3{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+    text-align: center;
+
+}
+.one .ser3:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.one .ser4{
+        width: 300px;
+        height: 250px;
+        padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+        text-align: center;
+}
+.one .ser4:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.two{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+   padding-bottom: 30px;
+    /* margin-top: 30px; */
+}
+.two .ser5{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+    text-align: center;
+}
+.two .ser5:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.two .ser6{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+    text-align: center;
+}
+.two .ser6:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.two .ser7{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+      cursor: pointer;
+    text-align: center;
+}
+.two .ser7:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+.two .ser8{
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-align: center;
+}
+.two .ser8:hover{
+    box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+    cursor: pointer;
+}
+
+/* this is the portfolio section of this website */
+.port-section{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    padding: 0 30px;
+}
+.port-section .port-sec {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+}
+.port-section .port-sec h1{
+    font-size: 40px;
+}
+.port-section .port-sec p{
+    font-size: 20px;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.showcase .main-port{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between  ;
+  padding-bottom: 30px;
+}
+.main-port .port1{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+
+}
+.main-port .port2{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+
+}
+.main-port .port3{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+
+}
+.main-port .port4{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+
+}
+.pport{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center ;
+  padding-bottom:50px;
+}
+.pport .port5{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+}
+.pport .port6{
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+}
+.main-port .port1:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+.main-port .port2:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+.main-port .port3:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+.main-port .port4:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+.pport .port5:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+.pport .port6:hover{
+  box-shadow: 0px 0px 20px rgba(134, 114, 245, 0.2);
+  cursor: pointer;
+}
+/* this is the contact section of this page */
+.hold-cont{
+  padding: 0 30px;
+}
+.hold-cont .cont-sec{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.hold-cont .cont-sec h1{
+  font-size: 40px;
+}
+.hold-cont .cont-sec p{
+  font-size: 20px;
+  color: gray;
+  text-transform: capitalize;
+}.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
+
+textarea {
+  height: 150px;
+}
