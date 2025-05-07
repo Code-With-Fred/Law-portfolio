@@ -1,77 +1,89 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('registerForm');
   const submitBtn = document.getElementById('submitBtn');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('textCont');
-  
+
   const emailError = document.getElementById('emailError');
   const messageError = document.getElementById('messageError');
+  const statusMessage = document.getElementById('statusMessage');
 
-  // Email validation
   const validateEmail = () => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value.trim())) {
-          emailError.textContent = 'Please enter a valid email address.';
-          return false;
-      } else {
-          emailError.textContent = '';
-          return true;
-      }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      emailError.textContent = 'Enter a valid email.';
+      return false;
+    } else {
+      emailError.textContent = '';
+      return true;
+    }
   };
 
-  // Message validation
   const validateMessage = () => {
-      if (messageInput.value.trim() === '') {
-          messageError.textContent = 'Message cannot be empty.';
-          return false;
-      } else {
-          messageError.textContent = '';
-          return true;
-      }
+    if (messageInput.value.trim() === '') {
+      messageError.textContent = 'Message cannot be empty.';
+      return false;
+    } else {
+      messageError.textContent = '';
+      return true;
+    }
   };
 
-  // Enable/disable submit button based on validation
   const enableSubmit = () => {
-      const isEmailValid = validateEmail();
-      const isMessageValid = validateMessage();
-      submitBtn.disabled = !(isEmailValid && isMessageValid);
+    const isEmailValid = validateEmail();
+    const isMessageValid = validateMessage();
+    submitBtn.disabled = !(isEmailValid && isMessageValid);
   };
 
-  // Listen to input events on email and message fields
   emailInput.addEventListener('input', enableSubmit);
   messageInput.addEventListener('input', enableSubmit);
 
-  // Form submission event handler
   form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
-      const formData = {
-          email: emailInput.value,
-          message: messageInput.value,
-      };
+    const formData = {
+      email: emailInput.value,
+      message: messageInput.value
+    };
 
-      try {
-          const response = await fetch('http://localhost:3000/send-email', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formData),
-          });
+    try {
+    
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
 
-          const data = await response.json();
+      const data = await response.json();
 
-          if (response.ok) {
-              alert('Email sent successfully!');
-          } else {
-              alert(data.message || 'Failed to send email');
-          }
-      } catch (error) {
-          console.error('Error:', error);
-          alert('Error sending email.');
+      statusMessage.style.display = 'block';
+      if (response.ok) {
+        statusMessage.className = 'success';
+        statusMessage.textContent = 'Email sent!';
+        form.reset();
+      } else {
+        statusMessage.className = 'failure';
+        statusMessage.textContent = data.message || 'Failed to send email.';
       }
+    } catch (err) {
+      console.error('Frontend error:', err);
+      statusMessage.className = 'failure';
+      statusMessage.textContent = 'Client error.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+      enableSubmit();
+      setTimeout(() => {
+        statusMessage.style.display = 'none';
+      }, 5000);
+    }
   });
 
-  // Initialize submit button state
   enableSubmit();
 });

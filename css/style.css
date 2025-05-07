@@ -386,7 +386,8 @@
   font-size: 20px;
   color: gray;
   text-transform: capitalize;
-}.form-container {
+}
+.form-container {
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -396,6 +397,19 @@
   margin-top: 50px;
 }
 
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
 input, textarea {
   width: 100%;
   padding: 10px;
@@ -403,6 +417,7 @@ input, textarea {
   margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 button {
@@ -415,6 +430,12 @@ button {
   border-radius: 5px;
   cursor: pointer;
   opacity: 0.7;
+  margin-top: 15px;
+  transition: opacity 0.3s;
+}
+
+button:hover:not(:disabled) {
+  opacity: 1;
 }
 
 button:disabled {
@@ -425,8 +446,30 @@ button:disabled {
 .error {
   color: red;
   font-size: 0.85rem;
+  min-height: 18px;
 }
 
 textarea {
   height: 150px;
+  resize: vertical;
+}
+
+#statusMessage {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.failure {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
